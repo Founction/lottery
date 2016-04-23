@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LYHistoryViewController.h
 //  彩票
 //
 //  Created by 李胜营 on 16/4/23.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LYHistoryViewController : UITableViewController
 
 @end
-
