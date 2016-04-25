@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6B8DC8F41CCDE4620068AE7E /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC8F31CCDE4620068AE7E /* UIImage+Image.m */; };
+		6B8DC8FA1CCE16110068AE7E /* LYCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC8F91CCE16110068AE7E /* LYCover.m */; };
+		6B8DC8FD1CCE1D4B0068AE7E /* LYActiveManu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC8FC1CCE1D4B0068AE7E /* LYActiveManu.m */; };
+		6B8DC8FF1CCE1E3C0068AE7E /* LYActiveManu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8DC8FE1CCE1E3C0068AE7E /* LYActiveManu.xib */; };
 		6BAB7C7A1CCB3FC400EEDE50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB7C791CCB3FC400EEDE50 /* main.m */; };
 		6BAB7C7D1CCB3FC400EEDE50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB7C7C1CCB3FC400EEDE50 /* AppDelegate.m */; };
 		6BAB7C831CCB3FC400EEDE50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAB7C811CCB3FC400EEDE50 /* Main.storyboard */; };
@@ -39,6 +42,11 @@
 		6B8DC8F21CCDE4620068AE7E /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		6B8DC8F31CCDE4620068AE7E /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		6B8DC8F71CCDF1F50068AE7E /* 彩票.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "彩票.pch"; sourceTree = "<group>"; };
+		6B8DC8F81CCE16110068AE7E /* LYCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCover.h; sourceTree = "<group>"; };
+		6B8DC8F91CCE16110068AE7E /* LYCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCover.m; sourceTree = "<group>"; };
+		6B8DC8FB1CCE1D4B0068AE7E /* LYActiveManu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYActiveManu.h; sourceTree = "<group>"; };
+		6B8DC8FC1CCE1D4B0068AE7E /* LYActiveManu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYActiveManu.m; sourceTree = "<group>"; };
+		6B8DC8FE1CCE1E3C0068AE7E /* LYActiveManu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYActiveManu.xib; sourceTree = "<group>"; };
 		6BAB7C741CCB3FC400EEDE50 /* 彩票.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "彩票.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BAB7C781CCB3FC400EEDE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BAB7C791CCB3FC400EEDE50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -239,6 +247,11 @@
 		6BAB7CDB1CCB625F00EEDE50 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B8DC8F81CCE16110068AE7E /* LYCover.h */,
+				6B8DC8F91CCE16110068AE7E /* LYCover.m */,
+				6B8DC8FB1CCE1D4B0068AE7E /* LYActiveManu.h */,
+				6B8DC8FC1CCE1D4B0068AE7E /* LYActiveManu.m */,
+				6B8DC8FE1CCE1E3C0068AE7E /* LYActiveManu.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B8DC8FF1CCE1E3C0068AE7E /* LYActiveManu.xib in Resources */,
 				6BAB7C831CCB3FC400EEDE50 /* Main.storyboard in Resources */,
 				6BAB7C881CCB3FC400EEDE50 /* LaunchScreen.xib in Resources */,
 				6BAB7C851CCB3FC400EEDE50 /* Images.xcassets in Resources */,
@@ -480,10 +494,12 @@
 				6BAB7CF51CCB6A0600EEDE50 /* LYDiscoverViewController.m in Sources */,
 				6BAB7CF21CCB699100EEDE50 /* LYArenaViewController.m in Sources */,
 				6BE9DD411CCBA03800BA3717 /* LYTabBarButton.m in Sources */,
+				6B8DC8FD1CCE1D4B0068AE7E /* LYActiveManu.m in Sources */,
 				6BAB7CEF1CCB62DC00EEDE50 /* LYTabBarController.m in Sources */,
 				6BAB7C7A1CCB3FC400EEDE50 /* main.m in Sources */,
 				6B8DC8F41CCDE4620068AE7E /* UIImage+Image.m in Sources */,
 				6BE9DD441CCBB35300BA3717 /* LYNavigationController.m in Sources */,
+				6B8DC8FA1CCE16110068AE7E /* LYCover.m in Sources */,
 				6BE9DD3E1CCB7EA200BA3717 /* LYTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,8 +627,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "彩票/classes/other/彩票.pch";
 				INFOPLIST_FILE = "彩票/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -624,8 +640,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "彩票/classes/other/彩票.pch";
 				INFOPLIST_FILE = "彩票/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

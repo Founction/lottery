@@ -6,7 +6,9 @@
 //  Copyright (c) 2016年 dasheng. All rights reserved.
 //
 
-
+#define LYScreenBounds [UIScreen mainScreen].bounds
+#define LYWindow [UIApplication sharedApplication].keyWindow
 
 #import "UIImage+Image.h"
 
+///Users/lishengying/Desktop/Practice/lottery/彩票/彩票/classes/other/彩票.pch

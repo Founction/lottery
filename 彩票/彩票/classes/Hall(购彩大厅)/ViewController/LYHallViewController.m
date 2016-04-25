@@ -8,6 +8,8 @@
 
 #import "LYHallViewController.h"
 #import "UIImage+Image.h"
+#import "LYCover.h"
+#import "LYActiveManu.h"
 
 @interface LYHallViewController ()
 
@@ -18,7 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithOrigRendingImage:@"CS50_activity_image"] style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithOrigRendingImage:@"CS50_activity_image"] style:UIBarButtonItemStylePlain target:self action:@selector(action)];
+    
+   
+    
+}
+- (void)action
+{
+    [LYCover show];
+    [LYActiveManu showActiveManuInPoint:self.view.center];
+
+
 }
 
 - (void)didReceiveMemoryWarning {
