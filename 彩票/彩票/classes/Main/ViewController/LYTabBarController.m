@@ -13,11 +13,14 @@
 #import "LYHistoryViewController.h"
 #import "LYMylotteryViewController.h"
 #import "LYTabBar.h"
+#import "LYNavigationController.h"
 
-@interface LYTabBarController ()
+@interface LYTabBarController ()<LYTabBarDelegate>
 
 /* 记录所有的子控制器 */
 @property (strong, nonatomic) NSMutableArray * items;
+
+
 
 @end
 
@@ -40,6 +43,8 @@
     LYTabBar *tabBar = [[LYTabBar alloc] init];
     tabBar.items = self.items;
     tabBar.frame = self.tabBar.frame;
+    tabBar.delegate = self;
+ 
     [self.view addSubview:tabBar];
 
 }
@@ -47,37 +52,61 @@
 {
     //竞技场
     LYArenaViewController *arenaVC = [[LYArenaViewController alloc] init];
-    [self setUpOneChildViewController:arenaVC setImage:[UIImage imageNamed:@"TabBar_Arena_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_Arena_selected_new"]];
+    [self setUpOneChildViewController:arenaVC setImage:[UIImage imageNamed:@"TabBar_Arena_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_Arena_selected_new"] title:nil];
     //发现
     LYDiscoverViewController *discoverVC = [[LYDiscoverViewController alloc] init];
-    [self setUpOneChildViewController:discoverVC setImage:[UIImage imageNamed:@"TabBar_Discovery_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_Discovery_selected_new"]];
+    [self setUpOneChildViewController:discoverVC setImage:[UIImage imageNamed:@"TabBar_Discovery_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_Discovery_selected_new"] title:@"发现"];
     
     //hall
     LYHallViewController *hallVC = [[LYHallViewController alloc] init];
-    [self setUpOneChildViewController:hallVC setImage:[UIImage imageNamed:@"TabBar_LotteryHall_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_LotteryHall_selected_new"]];
+    [self setUpOneChildViewController:hallVC setImage:[UIImage imageNamed:@"TabBar_LotteryHall_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_LotteryHall_selected_new"] title:@"购彩大厅"];
     
     //history
     LYHistoryViewController *historyVC = [[LYHistoryViewController alloc] init];
-    [self setUpOneChildViewController:historyVC setImage:[UIImage imageNamed:@"TabBar_History_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_History_selected_new"]];
+    [self setUpOneChildViewController:historyVC setImage:[UIImage imageNamed:@"TabBar_History_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_History_selected_new"] title:@"开奖信息"];
     
     //mylottery
     LYMylotteryViewController *MylotteryVC = [[LYMylotteryViewController alloc] init];
-    [self setUpOneChildViewController:MylotteryVC setImage:[UIImage imageNamed:@"TabBar_MyLottery_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_MyLottery_selected_new"]];
+    [self setUpOneChildViewController:MylotteryVC setImage:[UIImage imageNamed:@"TabBar_MyLottery_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_MyLottery_selected_new"] title:@"我的彩票"];
 
 }
 
-- (void)setUpOneChildViewController:(UIViewController *)vc setImage:(UIImage *)image setSeletedImage:(UIImage *)seletedImage
+- (void)setUpOneChildViewController:(UIViewController *)vc setImage:(UIImage *)image setSeletedImage:(UIImage *)seletedImage title:(NSString *)title
 {
+    
+    vc.navigationItem.title = title;
+    
     vc.tabBarItem.image = image;
     vc.tabBarItem.selectedImage = seletedImage;
     
     
+    
     [self.items addObject:vc.tabBarItem];
     
-    [self addChildViewController:vc];
+    vc.view.backgroundColor = [self randomColor];
     
+    LYNavigationController *nav = [[LYNavigationController alloc] initWithRootViewController:vc];
     
+    [self addChildViewController:nav];
+    
+}
 
+- (void)tabBar:(LYTabBar *)tabBar didClickedIndex:(NSInteger)index
+{
+    
+    self.selectedIndex = index;
+
+
+}
+
+- (UIColor *)randomColor
+{
+    CGFloat r = arc4random_uniform(256) / 255.0;
+    CGFloat g = arc4random_uniform(256) / 255.0;
+    CGFloat b = arc4random_uniform(256) / 255.0;
+    
+    UIColor *color = [UIColor colorWithRed:r green:g blue:b alpha:1.0];
+    return color;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

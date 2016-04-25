@@ -7,7 +7,12 @@
 //
 
 #import "LYTabBar.h"
+#import "LYTabBarButton.h"
+@interface LYTabBar()
+/*选中纪录 */
+@property (strong, nonatomic) LYTabBarButton * selBtn;
 
+@end
 @implementation LYTabBar
 - (void)setItems:(NSArray *)items
 {
@@ -17,14 +22,35 @@
     {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        [btn setImage:tabBar.image forState:UIControlStateNormal];
-        [btn setImage:tabBar.selectedImage forState:UIControlStateSelected];
+        btn.tag = self.subviews.count;
+        
+        
+        [btn setBackgroundImage:tabBar.image forState:UIControlStateNormal];
+        [btn setBackgroundImage:tabBar.selectedImage forState:UIControlStateSelected];
+        
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
         
         [self addSubview:btn];
+        
+        if (self.subviews.count == 1) {
+            
+            [self btnClick:btn];
+        }
+    }
+}
+- (void)btnClick:(LYTabBarButton *)btn
+{
+    _selBtn.selected = NO;
+    btn.selected= YES;
+    _selBtn = btn;
+    
+    if ([_delegate respondsToSelector:@selector(tabBar:didClickedIndex:)])
+    {
+        [_delegate tabBar:self didClickedIndex:btn.tag];
     }
 
-}
 
+}
 - (void)layoutSubviews
 {
     [super layoutSubviews];

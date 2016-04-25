@@ -7,8 +7,9 @@
 //
 
 #import "LYMylotteryViewController.h"
-
+#import "UIImage+Image.h"
 @interface LYMylotteryViewController ()
+
 
 @end
 
@@ -16,14 +17,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpNav];
+}
+- (void)setUpNav
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"客服" forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"FBMM_Barbutton"] forState:UIControlStateNormal];
+    [btn sizeToFit];
+
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithOrigRendingImage:@"Mylottery_config"] style:UIBarButtonItemStylePlain target:self action:@selector(setting)];
 }
 
+- (void)setting
+{
+
+
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
