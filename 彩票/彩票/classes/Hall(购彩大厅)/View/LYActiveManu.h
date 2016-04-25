@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LYActiveManu;
 
+@protocol LYActiveManuDelegate <NSObject>
+
+- (void)activedidClickCloseButtonWithManu:(LYActiveManu *)actiManu;
+
+@end
 @interface LYActiveManu : UIView
-+ (void)showActiveManuInPoint:(CGPoint)point;
+/* delegate */
+@property (weak, nonatomic) id<LYActiveManuDelegate> delegate;
++ (instancetype)showActiveManuInPoint:(CGPoint)point;
+
+
+- (void)hideActiveManuInpoint:(CGPoint)Point complention:(void(^)())complention;
 @end

@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="193" height="180"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xiaopingguo" translatesAutoresizingMaskIntoConstraints="NO" id="c9j-63-BbC">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiaopingguo" translatesAutoresizingMaskIntoConstraints="NO" id="c9j-63-BbC">
                     <rect key="frame" x="0.0" y="0.0" width="193" height="180"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcw-jo-uMh">
@@ -22,6 +22,12 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="c9j-63-BbC" secondAttribute="bottom" id="3fi-hb-wEe"/>
+                <constraint firstItem="c9j-63-BbC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fq0-Ut-pSe"/>
+                <constraint firstItem="c9j-63-BbC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XlR-18-4pl"/>
+                <constraint firstAttribute="trailing" secondItem="c9j-63-BbC" secondAttribute="trailing" id="p0y-U1-zfx"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="251.5" y="191"/>

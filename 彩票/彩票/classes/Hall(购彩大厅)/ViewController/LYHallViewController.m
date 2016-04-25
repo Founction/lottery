@@ -11,7 +11,7 @@
 #import "LYCover.h"
 #import "LYActiveManu.h"
 
-@interface LYHallViewController ()
+@interface LYHallViewController ()<LYActiveManuDelegate>
 
 @end
 
@@ -28,11 +28,20 @@
 - (void)action
 {
     [LYCover show];
-    [LYActiveManu showActiveManuInPoint:self.view.center];
+    LYActiveManu *activeManu = [LYActiveManu showActiveManuInPoint:self.view.center];
+    activeManu.delegate = self;
 
 
 }
+- (void)activedidClickCloseButtonWithManu:(LYActiveManu *)actiManu
+{
+    [actiManu hideActiveManuInpoint:CGPointMake(44, 44) complention:^{
+    
+        [LYCover hide];
+    }];
+    
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

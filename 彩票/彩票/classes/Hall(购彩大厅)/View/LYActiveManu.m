@@ -13,32 +13,44 @@
 @end
 @implementation LYActiveManu
 - (IBAction)clickClose:(id)sender {
-    [UIView animateWithDuration:0.1 animations:^{
+    
+    
+    if ([_delegate respondsToSelector:@selector(activedidClickCloseButtonWithManu:)]) {
+        [_delegate activedidClickCloseButtonWithManu:self];
+    }
+   
+}
+- (void)hideActiveManuInpoint:(CGPoint)Point complention:(void(^)())complention
+{
+    
+        [UIView animateWithDuration:1 animations:^{
         
-        self.transform = CGAffineTransformMakeScale(0, 0);
-    
-    
-    
+        CGAffineTransform transform = CGAffineTransformIdentity;
+        
+        transform = CGAffineTransformTranslate(transform,-self.center.x + 44, -self.center.y + 44);
+        
+        
+        transform = CGAffineTransformScale(transform,0.01,0.01);
+        
+        self.transform = transform;
+        
+  
     } completion:^(BOOL finished){
-    
+        
+        complention();
+        
         [self removeFromSuperview];
     }];
     
-    
-    
-    
-    
-    
 }
-
-+ (void)showActiveManuInPoint:(CGPoint)point
++ (instancetype)showActiveManuInPoint:(CGPoint)point
 {
     LYActiveManu *activeMant = [LYActiveManu activeManu];
     
     activeMant.center = point;
     
     [LYWindow addSubview:activeMant];
-
+    return activeMant;
 }
 
 + (instancetype)activeManu
