@@ -24,7 +24,7 @@
 }
 + (void)hide
 {
-    for (UIView *view in [UIApplication sharedApplication].keyWindow.subviews)
+    for (UIView *view in LYWindow.subviews)
     {
         if ([view isKindOfClass:self]) {
             [view removeFromSuperview];

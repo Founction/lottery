@@ -10,5 +10,7 @@
 #define LYWindow [UIApplication sharedApplication].keyWindow
 
 #import "UIImage+Image.h"
+#import "UIView+Frame.h"
+
 
 ///Users/lishengying/Desktop/Practice/lottery/彩票/彩票/classes/other/彩票.pch

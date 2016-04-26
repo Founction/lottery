@@ -10,20 +10,64 @@
 #import "UIImage+Image.h"
 #import "LYCover.h"
 #import "LYActiveManu.h"
+#import "DownManu.h"
+#import "manuItem.h"
 
 @interface LYHallViewController ()<LYActiveManuDelegate>
+/* 下拉视图模型 */
+@property (strong, nonatomic) manuItem * item;
+/* 模型数组 */
+@property (strong, nonatomic) NSArray * items;
+
+/* downmanu bool */
+@property (assign, nonatomic) BOOL * isDownManu;
+/* downmanu */
+@property (strong, nonatomic) DownManu * downM;
 
 @end
 
 @implementation LYHallViewController
+- (NSArray *)items
+{
+    if (_items == nil)
+    {
+        manuItem *item = [manuItem manuItemWithImageName:@"Development"];
+        manuItem *item1 = [manuItem manuItemWithImageName:@"Development"];
+        manuItem *item2 = [manuItem manuItemWithImageName:@"Development"];
+        manuItem *item3 = [manuItem manuItemWithImageName:@"Development"];
+        manuItem *item4 = [manuItem manuItemWithImageName:@"Development"];
+        manuItem *item5 = [manuItem manuItemWithImageName:@"Development"];
+        _items = @[item,item1,item2,item3,item4,item5];
+    }
+
+    
+    return _items;
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithOrigRendingImage:@"CS50_activity_image"] style:UIBarButtonItemStylePlain target:self action:@selector(action)];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithOrigRendingImage:@"Development"] style:UIBarButtonItemStylePlain target:self action:@selector(popManu)];
+    
    
     
+}
+
+- (void)popManu
+{
+    if (_isDownManu) {
+        self.downM = [DownManu showDownManuInView:self.view withItems:self.items];
+    }else
+    {
+        [self.downM hideDownManu];
+    
+    }
+    
+    _isDownManu = !_isDownManu;
+
 }
 - (void)action
 {
