@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LYTabBarController.h"
+#import "LYNewFeatureCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,23 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     LYTabBarController *tabBarVC = [[LYTabBarController alloc] init];
-    
+    UIViewController *vc = nil;
+    //判断版本号
+//    NSString *curVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
+//    
+//    NSString *oldVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"version"];
+//    
+//    if ([curVersion isEqualToString:oldVersion]) {
+//        
+//        vc = [[LYTabBarController alloc] init];
+//        
+//    }else{
+//        
+//        
+//        
+//        [[NSUserDefaults standardUserDefaults] setObject:curVersion forKey:@"version"];
+//    }
+//    vc = [[LYNewFeatureCollectionViewController alloc] init];
     self.window.rootViewController = tabBarVC;
     
     

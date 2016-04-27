@@ -14,6 +14,13 @@
 		6B8DC9021CCE51730068AE7E /* DownManu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC9011CCE51730068AE7E /* DownManu.m */; };
 		6B8DC9051CCE52230068AE7E /* manuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC9041CCE52230068AE7E /* manuItem.m */; };
 		6B8DC90B1CCE75730068AE7E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC90A1CCE75730068AE7E /* UIView+Frame.m */; };
+		6B9F8FB81CCF367A00A68A1C /* LYArenaNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8FB71CCF367A00A68A1C /* LYArenaNavigationController.m */; };
+		6B9F8FBA1CCF461600A68A1C /* LYDiscoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9F8FB91CCF461600A68A1C /* LYDiscoverViewController.storyboard */; };
+		6B9F8FBD1CCF4B8700A68A1C /* LYGroupBuyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8FBC1CCF4B8700A68A1C /* LYGroupBuyTableViewController.m */; };
+		6B9F8FC01CCF4BB300A68A1C /* LYLuckyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8FBF1CCF4BB300A68A1C /* LYLuckyViewController.m */; };
+		6B9F8FC71CD0545C00A68A1C /* LYNewFeatureCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8FC61CD0545C00A68A1C /* LYNewFeatureCollectionViewController.m */; };
+		6B9F8FCA1CD05C1A00A68A1C /* LYNewFeatureViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8FC91CD05C1A00A68A1C /* LYNewFeatureViewCell.m */; };
+		6B9F8FCD1CD068CA00A68A1C /* LYTittleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8FCC1CD068CA00A68A1C /* LYTittleView.m */; };
 		6BAB7C7A1CCB3FC400EEDE50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB7C791CCB3FC400EEDE50 /* main.m */; };
 		6BAB7C7D1CCB3FC400EEDE50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB7C7C1CCB3FC400EEDE50 /* AppDelegate.m */; };
 		6BAB7C831CCB3FC400EEDE50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAB7C811CCB3FC400EEDE50 /* Main.storyboard */; };
@@ -56,6 +63,19 @@
 		6B8DC9041CCE52230068AE7E /* manuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manuItem.m; sourceTree = "<group>"; };
 		6B8DC9091CCE75730068AE7E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		6B8DC90A1CCE75730068AE7E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		6B9F8FB61CCF367A00A68A1C /* LYArenaNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYArenaNavigationController.h; sourceTree = "<group>"; };
+		6B9F8FB71CCF367A00A68A1C /* LYArenaNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYArenaNavigationController.m; sourceTree = "<group>"; };
+		6B9F8FB91CCF461600A68A1C /* LYDiscoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LYDiscoverViewController.storyboard; sourceTree = "<group>"; };
+		6B9F8FBB1CCF4B8700A68A1C /* LYGroupBuyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYGroupBuyTableViewController.h; sourceTree = "<group>"; };
+		6B9F8FBC1CCF4B8700A68A1C /* LYGroupBuyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYGroupBuyTableViewController.m; sourceTree = "<group>"; };
+		6B9F8FBE1CCF4BB300A68A1C /* LYLuckyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLuckyViewController.h; sourceTree = "<group>"; };
+		6B9F8FBF1CCF4BB300A68A1C /* LYLuckyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLuckyViewController.m; sourceTree = "<group>"; };
+		6B9F8FC51CD0545C00A68A1C /* LYNewFeatureCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYNewFeatureCollectionViewController.h; sourceTree = "<group>"; };
+		6B9F8FC61CD0545C00A68A1C /* LYNewFeatureCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYNewFeatureCollectionViewController.m; sourceTree = "<group>"; };
+		6B9F8FC81CD05C1A00A68A1C /* LYNewFeatureViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYNewFeatureViewCell.h; sourceTree = "<group>"; };
+		6B9F8FC91CD05C1A00A68A1C /* LYNewFeatureViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYNewFeatureViewCell.m; sourceTree = "<group>"; };
+		6B9F8FCB1CD068CA00A68A1C /* LYTittleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTittleView.h; sourceTree = "<group>"; };
+		6B9F8FCC1CD068CA00A68A1C /* LYTittleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTittleView.m; sourceTree = "<group>"; };
 		6BAB7C741CCB3FC400EEDE50 /* 彩票.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "彩票.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BAB7C781CCB3FC400EEDE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BAB7C791CCB3FC400EEDE50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +125,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B9F8FC11CD0542B00A68A1C /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				6B9F8FC21CD0542B00A68A1C /* Model */,
+				6B9F8FC31CD0542B00A68A1C /* View */,
+				6B9F8FC41CD0542B00A68A1C /* ViewController */,
+			);
+			name = NewFeature;
+			path = classes/NewFeature;
+			sourceTree = "<group>";
+		};
+		6B9F8FC21CD0542B00A68A1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B9F8FC31CD0542B00A68A1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B9F8FC81CD05C1A00A68A1C /* LYNewFeatureViewCell.h */,
+				6B9F8FC91CD05C1A00A68A1C /* LYNewFeatureViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B9F8FC41CD0542B00A68A1C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6B9F8FC51CD0545C00A68A1C /* LYNewFeatureCollectionViewController.h */,
+				6B9F8FC61CD0545C00A68A1C /* LYNewFeatureCollectionViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		6BAB7C6B1CCB3FC400EEDE50 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				6BAB7CE11CCB625F00EEDE50 /* Main */,
+				6B9F8FC11CD0542B00A68A1C /* NewFeature */,
 				6BAB7CD11CCB625F00EEDE50 /* Arena（竞技场） */,
 				6BAB7CD51CCB625F00EEDE50 /* Didscover */,
 				6BAB7CD91CCB625F00EEDE50 /* Hall(购彩大厅) */,
@@ -197,6 +254,8 @@
 			children = (
 				6BAB7CF01CCB699100EEDE50 /* LYArenaViewController.h */,
 				6BAB7CF11CCB699100EEDE50 /* LYArenaViewController.m */,
+				6B9F8FB61CCF367A00A68A1C /* LYArenaNavigationController.h */,
+				6B9F8FB71CCF367A00A68A1C /* LYArenaNavigationController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -222,6 +281,8 @@
 		6BAB7CD71CCB625F00EEDE50 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B9F8FCB1CD068CA00A68A1C /* LYTittleView.h */,
+				6B9F8FCC1CD068CA00A68A1C /* LYTittleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +292,11 @@
 			children = (
 				6BAB7CF31CCB6A0600EEDE50 /* LYDiscoverViewController.h */,
 				6BAB7CF41CCB6A0600EEDE50 /* LYDiscoverViewController.m */,
+				6B9F8FB91CCF461600A68A1C /* LYDiscoverViewController.storyboard */,
+				6B9F8FBB1CCF4B8700A68A1C /* LYGroupBuyTableViewController.h */,
+				6B9F8FBC1CCF4B8700A68A1C /* LYGroupBuyTableViewController.m */,
+				6B9F8FBE1CCF4BB300A68A1C /* LYLuckyViewController.h */,
+				6B9F8FBF1CCF4BB300A68A1C /* LYLuckyViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -483,6 +549,7 @@
 			files = (
 				6B8DC8FF1CCE1E3C0068AE7E /* LYActiveManu.xib in Resources */,
 				6BAB7C831CCB3FC400EEDE50 /* Main.storyboard in Resources */,
+				6B9F8FBA1CCF461600A68A1C /* LYDiscoverViewController.storyboard in Resources */,
 				6BAB7C881CCB3FC400EEDE50 /* LaunchScreen.xib in Resources */,
 				6BAB7C851CCB3FC400EEDE50 /* Images.xcassets in Resources */,
 			);
@@ -502,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B9F8FC71CD0545C00A68A1C /* LYNewFeatureCollectionViewController.m in Sources */,
 				6BAB7CFB1CCB6A3000EEDE50 /* LYHistoryViewController.m in Sources */,
 				6BAB7CF81CCB6A1B00EEDE50 /* LYHallViewController.m in Sources */,
 				6BAB7C7D1CCB3FC400EEDE50 /* AppDelegate.m in Sources */,
@@ -514,11 +582,16 @@
 				6BAB7CEF1CCB62DC00EEDE50 /* LYTabBarController.m in Sources */,
 				6BAB7C7A1CCB3FC400EEDE50 /* main.m in Sources */,
 				6B8DC90B1CCE75730068AE7E /* UIView+Frame.m in Sources */,
+				6B9F8FB81CCF367A00A68A1C /* LYArenaNavigationController.m in Sources */,
 				6B8DC8F41CCDE4620068AE7E /* UIImage+Image.m in Sources */,
+				6B9F8FC01CCF4BB300A68A1C /* LYLuckyViewController.m in Sources */,
 				6BE9DD441CCBB35300BA3717 /* LYNavigationController.m in Sources */,
 				6B8DC9021CCE51730068AE7E /* DownManu.m in Sources */,
+				6B9F8FBD1CCF4B8700A68A1C /* LYGroupBuyTableViewController.m in Sources */,
 				6B8DC8FA1CCE16110068AE7E /* LYCover.m in Sources */,
 				6BE9DD3E1CCB7EA200BA3717 /* LYTabBar.m in Sources */,
+				6B9F8FCA1CD05C1A00A68A1C /* LYNewFeatureViewCell.m in Sources */,
+				6B9F8FCD1CD068CA00A68A1C /* LYTittleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

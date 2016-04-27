@@ -14,6 +14,7 @@
 #import "LYMylotteryViewController.h"
 #import "LYTabBar.h"
 #import "LYNavigationController.h"
+#import "LYArenaNavigationController.h"
 
 @interface LYTabBarController ()<LYTabBarDelegate>
 
@@ -54,7 +55,8 @@
     LYArenaViewController *arenaVC = [[LYArenaViewController alloc] init];
     [self setUpOneChildViewController:arenaVC setImage:[UIImage imageNamed:@"TabBar_Arena_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_Arena_selected_new"] title:nil];
     //发现
-    LYDiscoverViewController *discoverVC = [[LYDiscoverViewController alloc] init];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LYDiscoverViewController" bundle:[NSBundle mainBundle]];
+    LYDiscoverViewController *discoverVC = [storyboard instantiateInitialViewController];
     [self setUpOneChildViewController:discoverVC setImage:[UIImage imageNamed:@"TabBar_Discovery_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_Discovery_selected_new"] title:@"发现"];
     
     //hall
@@ -62,6 +64,8 @@
     [self setUpOneChildViewController:hallVC setImage:[UIImage imageNamed:@"TabBar_LotteryHall_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_LotteryHall_selected_new"] title:@"购彩大厅"];
     
     //history
+    
+ 
     LYHistoryViewController *historyVC = [[LYHistoryViewController alloc] init];
     [self setUpOneChildViewController:historyVC setImage:[UIImage imageNamed:@"TabBar_History_new"] setSeletedImage:[UIImage imageNamed:@"TabBar_History_selected_new"] title:@"开奖信息"];
     
@@ -85,7 +89,11 @@
     
     vc.view.backgroundColor = [self randomColor];
     
-    LYNavigationController *nav = [[LYNavigationController alloc] initWithRootViewController:vc];
+    UINavigationController *nav = [[LYNavigationController alloc] initWithRootViewController:vc];
+    
+    if ([vc isKindOfClass:[LYArenaViewController class]]) {
+        nav = [[LYArenaNavigationController alloc]initWithRootViewController:vc];
+    }
     
     [self addChildViewController:nav];
     

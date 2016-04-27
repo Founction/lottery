@@ -1,91 +1,37 @@
 //
-//  LYHallViewController.m
+//  LYGroupBuyTableViewController.m
 //  彩票
 //
-//  Created by 李胜营 on 16/4/23.
+//  Created by 李胜营 on 16/4/26.
 //  Copyright (c) 2016年 dasheng. All rights reserved.
 //
 
-#import "LYHallViewController.h"
-#import "UIImage+Image.h"
-#import "LYCover.h"
-#import "LYActiveManu.h"
-#import "DownManu.h"
-#import "manuItem.h"
+#import "LYGroupBuyTableViewController.h"
 
-@interface LYHallViewController ()<LYActiveManuDelegate>
-/* 下拉视图模型 */
-@property (strong, nonatomic) manuItem * item;
-/* 模型数组 */
-@property (strong, nonatomic) NSArray * items;
-
-/* downmanu bool */
-@property (assign, nonatomic) BOOL * isDownManu;
-/* downmanu */
-@property (strong, nonatomic) DownManu * downM;
+@interface LYGroupBuyTableViewController ()
+/* titleView */
+@property (weak, nonatomic) UIButton * titleView;
 
 @end
 
-@implementation LYHallViewController
-- (NSArray *)items
-{
-    if (_items == nil)
-    {
-        manuItem *item = [manuItem manuItemWithImageName:@"Development"];
-        manuItem *item1 = [manuItem manuItemWithImageName:@"Development"];
-        manuItem *item2 = [manuItem manuItemWithImageName:@"Development"];
-        manuItem *item3 = [manuItem manuItemWithImageName:@"Development"];
-        manuItem *item4 = [manuItem manuItemWithImageName:@"Development"];
-        manuItem *item5 = [manuItem manuItemWithImageName:@"Development"];
-        _items = @[item,item1,item2,item3,item4,item5];
-    }
-
-    
-    return _items;
-
-}
+@implementation LYGroupBuyTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithOrigRendingImage:@"CS50_activity_image"] style:UIBarButtonItemStylePlain target:self action:@selector(action)];
+    UIButton *titleView = [UIButton buttonWithType:UIButtonTypeCustom];
+    _titleView = titleView;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithOrigRendingImage:@"Development"] style:UIBarButtonItemStylePlain target:self action:@selector(popManu)];
+    [titleView setTitle:@"全部彩种" forState:UIControlStateNormal];
+    [titleView setImage:[UIImage imageNamed:@"YellowDownArrow"] forState:UIControlStateNormal];
     
-   
+    self.navigationItem.titleView = titleView;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"助手" style:UIBarButtonItemStylePlain  target:self action:nil];
+    
+    
     
 }
 
-- (void)popManu
-{
-    if (_isDownManu == NO) {
-        self.downM = [DownManu showDownManuInView:self.view withItems:self.items];
-    }else
-    {
-        [self.downM hideDownManu];
-    
-    }
-    
-    _isDownManu = ! _isDownManu;
-
-}
-- (void)action
-{
-    [LYCover show];
-    LYActiveManu *activeManu = [LYActiveManu showActiveManuInPoint:self.view.center];
-    activeManu.delegate = self;
-
-
-}
-- (void)activedidClickCloseButtonWithManu:(LYActiveManu *)actiManu
-{
-    [actiManu hideActiveManuInpoint:CGPointMake(44, 44) complention:^{
-    
-        [LYCover hide];
-    }];
-    
-
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

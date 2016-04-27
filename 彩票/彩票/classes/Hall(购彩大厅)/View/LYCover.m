@@ -24,14 +24,13 @@
 }
 + (void)hide
 {
-    for (UIView *view in LYWindow.subviews)
+
+        for (UIView *view in LYWindow.subviews)
     {
         if ([view isKindOfClass:self]) {
             [view removeFromSuperview];
         }
     }
-
-
 }
 
 @end

@@ -14,8 +14,31 @@
 
 @implementation LYArenaViewController
 
+- (void)loadView
+{
+    
+    UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NLArenaBackground"]];
+    
+    imageV.userInteractionEnabled = YES;
+
+    
+    self.view = imageV;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:@[@"篮球",@"足球"]];
+    
+    
+    seg.width += 40;
+    
+    [seg setBackgroundImage:[UIImage imageWithOrigRendingImage:@"CPArenaSegmentBG"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [seg setBackgroundImage:[UIImage imageWithOrigRendingImage:@"CPArenaSegmentSelectedBG"] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+    //29 80 105
+    seg.tintColor = [UIColor colorWithRed:29 green:80 blue:105 alpha:1.0];
+    
+    
+    self.navigationItem.titleView = seg;
     
 }
 
