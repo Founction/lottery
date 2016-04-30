@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B8CCDF11CD498F000D7A345 /* LYGuideTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8CCDF01CD498F000D7A345 /* LYGuideTool.m */; };
+		6B8CCDF41CD4992F00D7A345 /* LYSaveTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8CCDF31CD4992F00D7A345 /* LYSaveTool.m */; };
 		6B8DC8F41CCDE4620068AE7E /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC8F31CCDE4620068AE7E /* UIImage+Image.m */; };
 		6B8DC8FA1CCE16110068AE7E /* LYCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC8F91CCE16110068AE7E /* LYCover.m */; };
 		6B8DC8FD1CCE1D4B0068AE7E /* LYActiveManu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DC8FC1CCE1D4B0068AE7E /* LYActiveManu.m */; };
@@ -49,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B8CCDEF1CD498F000D7A345 /* LYGuideTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYGuideTool.h; sourceTree = "<group>"; };
+		6B8CCDF01CD498F000D7A345 /* LYGuideTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYGuideTool.m; sourceTree = "<group>"; };
+		6B8CCDF21CD4992F00D7A345 /* LYSaveTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSaveTool.h; sourceTree = "<group>"; };
+		6B8CCDF31CD4992F00D7A345 /* LYSaveTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSaveTool.m; sourceTree = "<group>"; };
 		6B8DC8F21CCDE4620068AE7E /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		6B8DC8F31CCDE4620068AE7E /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		6B8DC8F71CCDF1F50068AE7E /* 彩票.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "彩票.pch"; sourceTree = "<group>"; };
@@ -125,6 +131,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B8CCDE91CD4987A00D7A345 /* Tool(业务类) */ = {
+			isa = PBXGroup;
+			children = (
+				6B8CCDED1CD498BD00D7A345 /* guide */,
+				6B8CCDEE1CD498BD00D7A345 /* save */,
+				6BAB7CE11CCB625F00EEDE50 /* Main */,
+				6B9F8FC11CD0542B00A68A1C /* NewFeature */,
+				6BAB7CD11CCB625F00EEDE50 /* Arena（竞技场） */,
+				6BAB7CD51CCB625F00EEDE50 /* Didscover */,
+				6BAB7CD91CCB625F00EEDE50 /* Hall(购彩大厅) */,
+				6BAB7CDD1CCB625F00EEDE50 /* History */,
+				6BAB7CE51CCB625F00EEDE50 /* Mylottery */,
+				6BAB7C761CCB3FC400EEDE50 /* 彩票 */,
+				6B8CCDEA1CD4987A00D7A345 /* Model */,
+				6B8CCDEB1CD4987A00D7A345 /* View */,
+				6B8CCDEC1CD4987A00D7A345 /* ViewController */,
+			);
+			name = "Tool(业务类)";
+			path = "彩票/classes/Tool(业务类)";
+			sourceTree = "<group>";
+		};
+		6B8CCDEA1CD4987A00D7A345 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B8CCDEB1CD4987A00D7A345 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B8CCDEC1CD4987A00D7A345 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6B8CCDED1CD498BD00D7A345 /* guide */ = {
+			isa = PBXGroup;
+			children = (
+				6B8CCDEF1CD498F000D7A345 /* LYGuideTool.h */,
+				6B8CCDF01CD498F000D7A345 /* LYGuideTool.m */,
+			);
+			path = guide;
+			sourceTree = "<group>";
+		};
+		6B8CCDEE1CD498BD00D7A345 /* save */ = {
+			isa = PBXGroup;
+			children = (
+				6B8CCDF21CD4992F00D7A345 /* LYSaveTool.h */,
+				6B8CCDF31CD4992F00D7A345 /* LYSaveTool.m */,
+			);
+			path = save;
+			sourceTree = "<group>";
+		};
 		6B9F8FC11CD0542B00A68A1C /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +199,7 @@
 				6B9F8FC41CD0542B00A68A1C /* ViewController */,
 			);
 			name = NewFeature;
-			path = classes/NewFeature;
+			path = ../NewFeature;
 			sourceTree = "<group>";
 		};
 		6B9F8FC21CD0542B00A68A1C /* Model */ = {
@@ -164,7 +230,7 @@
 		6BAB7C6B1CCB3FC400EEDE50 = {
 			isa = PBXGroup;
 			children = (
-				6BAB7C761CCB3FC400EEDE50 /* 彩票 */,
+				6B8CCDE91CD4987A00D7A345 /* Tool(业务类) */,
 				6BAB7C901CCB3FC400EEDE50 /* 彩票Tests */,
 				6BAB7C751CCB3FC400EEDE50 /* Products */,
 			);
@@ -182,20 +248,14 @@
 		6BAB7C761CCB3FC400EEDE50 /* 彩票 */ = {
 			isa = PBXGroup;
 			children = (
-				6BAB7CE11CCB625F00EEDE50 /* Main */,
-				6B9F8FC11CD0542B00A68A1C /* NewFeature */,
-				6BAB7CD11CCB625F00EEDE50 /* Arena（竞技场） */,
-				6BAB7CD51CCB625F00EEDE50 /* Didscover */,
-				6BAB7CD91CCB625F00EEDE50 /* Hall(购彩大厅) */,
-				6BAB7CDD1CCB625F00EEDE50 /* History */,
-				6BAB7CE51CCB625F00EEDE50 /* Mylottery */,
 				6BAB7CE91CCB625F00EEDE50 /* other */,
 				6BAB7C811CCB3FC400EEDE50 /* Main.storyboard */,
 				6BAB7C841CCB3FC400EEDE50 /* Images.xcassets */,
 				6BAB7C861CCB3FC400EEDE50 /* LaunchScreen.xib */,
 				6BAB7C771CCB3FC400EEDE50 /* Supporting Files */,
 			);
-			path = "彩票";
+			name = "彩票";
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		6BAB7C771CCB3FC400EEDE50 /* Supporting Files */ = {
@@ -232,7 +292,7 @@
 				6BAB7CD41CCB625F00EEDE50 /* ViewController */,
 			);
 			name = "Arena（竞技场）";
-			path = "classes/Arena（竞技场）";
+			path = "../Arena（竞技场）";
 			sourceTree = "<group>";
 		};
 		6BAB7CD21CCB625F00EEDE50 /* Model */ = {
@@ -268,7 +328,7 @@
 				6BAB7CD81CCB625F00EEDE50 /* ViewController */,
 			);
 			name = Didscover;
-			path = classes/Didscover;
+			path = ../Didscover;
 			sourceTree = "<group>";
 		};
 		6BAB7CD61CCB625F00EEDE50 /* Model */ = {
@@ -309,7 +369,7 @@
 				6BAB7CDC1CCB625F00EEDE50 /* ViewController */,
 			);
 			name = "Hall(购彩大厅)";
-			path = "classes/Hall(购彩大厅)";
+			path = "../Hall(购彩大厅)";
 			sourceTree = "<group>";
 		};
 		6BAB7CDA1CCB625F00EEDE50 /* Model */ = {
@@ -352,7 +412,7 @@
 				6BAB7CE01CCB625F00EEDE50 /* ViewController */,
 			);
 			name = History;
-			path = classes/History;
+			path = ../History;
 			sourceTree = "<group>";
 		};
 		6BAB7CDE1CCB625F00EEDE50 /* Model */ = {
@@ -386,7 +446,7 @@
 				6BAB7CE41CCB625F00EEDE50 /* ViewController */,
 			);
 			name = Main;
-			path = classes/Main;
+			path = ../Main;
 			sourceTree = "<group>";
 		};
 		6BAB7CE21CCB625F00EEDE50 /* Model */ = {
@@ -426,7 +486,7 @@
 				6BAB7CE81CCB625F00EEDE50 /* ViewController */,
 			);
 			name = Mylottery;
-			path = classes/Mylottery;
+			path = ../Mylottery;
 			sourceTree = "<group>";
 		};
 		6BAB7CE61CCB625F00EEDE50 /* Model */ = {
@@ -570,6 +630,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9F8FC71CD0545C00A68A1C /* LYNewFeatureCollectionViewController.m in Sources */,
+				6B8CCDF41CD4992F00D7A345 /* LYSaveTool.m in Sources */,
 				6BAB7CFB1CCB6A3000EEDE50 /* LYHistoryViewController.m in Sources */,
 				6BAB7CF81CCB6A1B00EEDE50 /* LYHallViewController.m in Sources */,
 				6BAB7C7D1CCB3FC400EEDE50 /* AppDelegate.m in Sources */,
@@ -586,6 +647,7 @@
 				6B8DC8F41CCDE4620068AE7E /* UIImage+Image.m in Sources */,
 				6B9F8FC01CCF4BB300A68A1C /* LYLuckyViewController.m in Sources */,
 				6BE9DD441CCBB35300BA3717 /* LYNavigationController.m in Sources */,
+				6B8CCDF11CD498F000D7A345 /* LYGuideTool.m in Sources */,
 				6B8DC9021CCE51730068AE7E /* DownManu.m in Sources */,
 				6B9F8FBD1CCF4B8700A68A1C /* LYGroupBuyTableViewController.m in Sources */,
 				6B8DC8FA1CCE16110068AE7E /* LYCover.m in Sources */,

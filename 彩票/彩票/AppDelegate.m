@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "LYTabBarController.h"
 #import "LYNewFeatureCollectionViewController.h"
+#import "LYSaveTool.h"
+#import "LYGuideTool.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +23,8 @@
   
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    LYTabBarController *tabBarVC = [[LYTabBarController alloc] init];
-    UIViewController *vc = nil;
+//    LYTabBarController *tabBarVC = [[LYTabBarController alloc] init];
+//    UIViewController *vc = nil;
     //判断版本号
 //    NSString *curVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
 //    
@@ -38,15 +40,13 @@
 //        
 //        [[NSUserDefaults standardUserDefaults] setObject:curVersion forKey:@"version"];
 //    }
-    vc = [[LYNewFeatureCollectionViewController alloc] init];
+//    vc = [[LYNewFeatureCollectionViewController alloc] init];
+    
+    UIViewController *vc = [LYGuideTool guideTool];
+    
     self.window.rootViewController = vc;
     
-    
-    
-    
     [self.window makeKeyAndVisible];
-    
-    
     
     return YES;
 }

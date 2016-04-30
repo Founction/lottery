@@ -37,16 +37,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tabBar removeFromSuperview];
+//    [self.tabBar removeFromSuperview];
     
     [self setUpAllChildViewController];
     
     LYTabBar *tabBar = [[LYTabBar alloc] init];
     tabBar.items = self.items;
-    tabBar.frame = self.tabBar.frame;
+    tabBar.frame = self.tabBar.bounds;
+    tabBar.backgroundColor = [UIColor redColor];
     tabBar.delegate = self;
- 
-    [self.view addSubview:tabBar];
+
+    [self.tabBar addSubview:tabBar];
+
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    for (UIView *view in self.tabBar.subviews)
+    {
+        
+        if (![view isKindOfClass:[LYTabBar class]])
+        {
+            [view removeFromSuperview];
+        }
+    }
 
 }
 - (void)setUpAllChildViewController
@@ -101,10 +115,7 @@
 
 - (void)tabBar:(LYTabBar *)tabBar didClickedIndex:(NSInteger)index
 {
-    
     self.selectedIndex = index;
-
-
 }
 
 - (UIColor *)randomColor

@@ -20,6 +20,10 @@
    
 
 }
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *vc = segue.destinationViewController;
+//    vc.hidesBottomBarWhenPushed = YES;
+}
 
 @end
