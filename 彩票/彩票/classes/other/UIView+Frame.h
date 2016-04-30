@@ -18,4 +18,9 @@
 /* y */
 @property (assign, nonatomic) CGFloat y;
 
+/* centerX */
+@property (assign, nonatomic) double  centerX ;
+
+/* centerY */
+@property (assign, nonatomic) double  centerY ;
 @end

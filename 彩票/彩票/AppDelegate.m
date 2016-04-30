@@ -38,8 +38,8 @@
 //        
 //        [[NSUserDefaults standardUserDefaults] setObject:curVersion forKey:@"version"];
 //    }
-//    vc = [[LYNewFeatureCollectionViewController alloc] init];
-    self.window.rootViewController = tabBarVC;
+    vc = [[LYNewFeatureCollectionViewController alloc] init];
+    self.window.rootViewController = vc;
     
     
     

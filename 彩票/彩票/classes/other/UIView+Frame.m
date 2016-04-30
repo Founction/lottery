@@ -9,6 +9,29 @@
 #import "UIView+Frame.h"
 
 @implementation UIView (Frame)
+
+- (double)centerX
+{
+    return self.center.x;
+}
+
+-(void)setCenterX:(double)centerX
+{
+    CGPoint point = self.center;
+    point.x = centerX;
+    self.center = point;
+}
+- (double)centerY
+{
+    return self.center.y;
+}
+
+-(void)setCenterY:(double)centerY
+{
+    CGPoint point = self.center;
+    point.y = centerY;
+    self.center = point;
+}
 - (CGFloat)x
 {
     return self.frame.origin.x;

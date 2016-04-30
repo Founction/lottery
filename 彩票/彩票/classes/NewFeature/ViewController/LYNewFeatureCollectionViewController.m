@@ -11,6 +11,15 @@
 
 @interface LYNewFeatureCollectionViewController ()
 
+/* 引导页 */
+@property (weak, nonatomic) UIImageView * guide;
+@property (weak, nonatomic) UIImageView * largeLable;
+
+/* <#信息#> */
+@property (weak, nonatomic) UIImageView * guideSmallView;
+
+/* 纪录动画效果的上次坐标 */
+@property (assign, nonatomic) CGFloat lastOffsetX;
 @end
 
 @implementation LYNewFeatureCollectionViewController
@@ -41,14 +50,66 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self.collectionView registerClass:[LYNewFeatureViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
+    [self setUpAllChildView];
+    
     // Do any additional setup after loading the view.
 }
+- (void)setUpAllChildView
+{
+    UIImageView *guide = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"guide1"]];
+    guide.centerX = self.view.centerX;
+    self.guide = guide;
+    [self.collectionView addSubview:_guide];
+    
+    UIImageView *guideLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"guideLine"]];
+    guideLine.x -= 170;
+    [self.collectionView addSubview:guideLine];
+    
+    UIImageView *largeLable = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"guideLargeText1"]];
+    largeLable.centerX = self.view.centerX;
+    largeLable.centerY = self.view.height * 0.7;
+    self.largeLable = largeLable;
+    [self.collectionView addSubview:_largeLable];
+    
+    
+    // smallText
+    UIImageView *smallText = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"guideSmallText1"]];
+    _guideSmallView = smallText;
+    smallText.centerX = self.view.centerX;
+    smallText.centerY = self.view.height * 0.8;
+    [self.collectionView addSubview:smallText];
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark <UIScrollViewDelegate>
 
+//减速完成，也就是当完全切换的时候
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    //1.计算偏移量，只会一个个的偏移，向右滚动的时候contentoffset.x。向左的时候，取负。
+    CGFloat curOffsetX= scrollView.contentOffset.x;
+    CGFloat offsetX = curOffsetX - _lastOffsetX;
+    //2.先偏移出两个，为了从能够向右滑动的时候，图片从右进来，向左滑动的时候，图片从左进来。
+    self.guide.x += 2 * offsetX;
+    self.guideSmallView.x += 2 * offsetX;
+    self.largeLable.x += 2 * offsetX;
+    //3.再回来一个偏移量。
+    [UIView animateWithDuration:0.2 animations:^{
+        
+        self.guide.x -= offsetX;
+        self.guideSmallView.x -= offsetX;
+        self.largeLable.x -= offsetX;
+    }];
+    //4.重新设置image，用最少的imageview，循环利用
+    int page = scrollView.contentOffset.x / self.view.width + 1;
+    
+    self.guide.image = [UIImage imageNamed:[NSString stringWithFormat:@"guide%d",page]];
+    
+    self.lastOffsetX = curOffsetX;
+}
 /*
 #pragma mark - Navigation
 
@@ -80,6 +141,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     cell.image = image;
     
+    [cell hideStartButton:indexPath count:4];
     return cell;
 }
 

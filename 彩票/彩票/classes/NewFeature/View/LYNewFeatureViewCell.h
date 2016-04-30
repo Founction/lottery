@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface LYNewFeatureViewCell : UICollectionViewCell
 
 /* image */
 @property (strong, nonatomic) UIImage * image;
+
+// 按钮隐藏方法
+- (void)hideStartButton:(NSIndexPath *)indexPath count:(NSInteger)pagesCount;
 
 
 @end
