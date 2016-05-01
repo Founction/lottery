@@ -8,7 +8,7 @@
 
 #import "LYNavigationController.h"
 
-@interface LYNavigationController()<UINavigationControllerDelegate>
+@interface LYNavigationController()<UINavigationControllerDelegate,UIGestureRecognizerDelegate>
 /* <#信息#> */
 @property (strong, nonatomic) id popDelegate;
 @end
@@ -36,6 +36,12 @@
     
     self.delegate = self;
     self.popDelegate = self.interactivePopGestureRecognizer.delegate;
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    
+    pan.delegate = self;
+    
+    [self.view addGestureRecognizer:pan];
 
 
 }
