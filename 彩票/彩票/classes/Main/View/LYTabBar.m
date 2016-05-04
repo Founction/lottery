@@ -48,8 +48,6 @@
     {
         [_delegate tabBar:self didClickedIndex:btn.tag];
     }
-
-
 }
 - (void)layoutSubviews
 {

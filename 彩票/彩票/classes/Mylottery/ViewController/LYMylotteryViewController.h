@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LYMylotteryViewController : UITableViewController
+@interface LYMylotteryViewController : UIViewController
 
 @end

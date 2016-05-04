@@ -21,6 +21,8 @@
     UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:self, nil];
     
     [navBar setBackgroundImage:[UIImage imageNamed:@"NavBar64"] forBarMetrics:UIBarMetricsDefault];
+    
+    [navBar setTintColor:[UIColor whiteColor]];
 
     NSMutableDictionary *titleAttribute = [NSMutableDictionary dictionary];
     titleAttribute[NSForegroundColorAttributeName] = [UIColor whiteColor];
@@ -33,7 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.interactivePopGestureRecognizer.enabled = NO;
     self.delegate = self;
     self.popDelegate = self.interactivePopGestureRecognizer.delegate;
     
@@ -46,15 +48,8 @@
 
 }
 //在这里恢复代理，能够使滑动
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    
-    if (viewController == [self.viewControllers firstObject]) {
-        self.interactivePopGestureRecognizer.delegate = self.popDelegate;
-    }
-    
 
-}
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
 
@@ -62,22 +57,13 @@
     {
         viewController.hidesBottomBarWhenPushed = YES;
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"NavBack"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
-        /**
-         *  为添加滑动功能
-         */
-         self.interactivePopGestureRecognizer.delegate = nil;
-        
+  
     }
 
     [super pushViewController:viewController animated:YES];
 }
 
-- (UIViewController *)popViewControllerAnimated:(BOOL)animated
-{
-    //仍然存在bug，因为当滑动一半而不滑动的时候，就会使滑动失效
-    //    self.interactivePopGestureRecognizer.delegate = self.popDelegate;
-    return [super popViewControllerAnimated:animated];
-}
+
 - (void)back
 {
     

@@ -97,8 +97,6 @@
     vc.tabBarItem.image = image;
     vc.tabBarItem.selectedImage = seletedImage;
     
-    
-    
     [self.items addObject:vc.tabBarItem];
     
     vc.view.backgroundColor = [self randomColor];
